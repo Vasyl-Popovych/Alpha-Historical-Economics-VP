@@ -1,0 +1,132 @@
+/* Контейнер для карток */
+.Europe {
+    display: grid; /* Використання CSS Grid для розміщення карток */
+    grid-template-columns: 1fr; /* Одна колонка для мобільних екранів */
+    gap: 20px; /* Відстань між картками */
+    margin-left: 25px; /* Відступ ліворуч від контейнера */
+    margin-bottom: 20px; /* Відступ знизу */
+}
+
+/* Налаштування для карток */
+.cuntry {
+    width: 100%; /* Картка займає всю ширину контейнера */
+    max-width: 400px; /* Максимальна ширина картки */
+    padding: 10px; /* Внутрішні відступи для картки */
+    display: flex; /* Flex-контейнер для структури картки */
+    flex-direction: column; /* Вертикальне вирівнювання елементів всередині */
+    justify-content: space-between; /* Простір розподіляється між елементами */
+}
+
+.card {
+    display: flex; /* Flex-контейнер для картки */
+    flex-direction: column; /* Вертикальне розташування елементів */
+    justify-content: space-between; /* Простір між елементами */
+    height: 100%; /* Висота картки відповідає вмісту */
+    background: linear-gradient(90deg, #2f3b94 0%, #c8c9d0 99%); /* Градієнтний фон */
+    color: aliceblue; /* Колір тексту */
+}
+
+.card-body {
+    flex-grow: 1; /* Заповнює весь доступний простір */
+    display: flex; /* Flex-контейнер для тіла картки */
+    flex-direction: column; /* Вертикальне вирівнювання тексту та інших елементів */
+    justify-content: space-between; /* Простір між елементами тіла картки */
+}
+
+.card-text {
+    flex-grow: 1; /* Розтягується, щоб заповнити доступний простір */
+    overflow: hidden; /* Приховує надлишковий текст */
+    display: -webkit-box; /* Відображення елемента як контейнер з рядками */
+    /* -webkit-line-clamp: 4; Обмежує текст до 4 рядків */
+    -webkit-box-orient: vertical; /* Вертикальне орієнтування елементів */
+    /* text-overflow: ellipsis; Додає три крапки ("...") для довгого тексту */
+}
+
+.card img {
+    max-height: 200px; /* Обмеження висоти зображення */
+    object-fit: cover; /* Зображення заповнює доступну область */
+}
+
+.card a {
+    text-decoration: none; /* Видаляє підкреслення з посилання */
+    color: aliceblue; /* Колір тексту посилання */
+    align-self: flex-end; /* Вирівнює посилання донизу картки */
+}
+
+footer {
+    display: flex; /* Flex-контейнер для футера */
+    padding: 50px 20px; /* Внутрішні відступи */
+    align-items: center; /* Вирівнювання елементів по центру */
+    flex-direction: column; /* Вертикальне розташування елементів */
+    position: relative; /* Відносне позиціонування футера */
+    background-color: #21232e; /* Темний фон футера */
+    color: white; /* Колір тексту */
+ }
+
+ footer .lo p {
+    width: 900px; /* Ширина текстового блоку */
+    text-align: justify; /* Вирівнювання тексту по ширині */
+    margin-bottom: 15px; /* Відступ знизу між абзацами */
+ }
+
+ footer .lo p:first-child {
+    margin-bottom: 30px; /* Збільшений відступ для першого абзацу */
+ }
+ 
+ footer .lo p b {
+    color: #f39c12; /* Виділення жирним кольором #f39c12 */
+ }
+
+ /* Дві колонки на середніх екранах */
+@media (min-width: 576px) {
+    .Europe {
+        grid-template-columns: repeat(2, 1fr); /* Дві колонки для екранів середнього розміру */
+    }
+}
+
+/* Чотири колонки на великих екранах */
+@media (min-width: 992px) {
+    .Europe {
+        grid-template-columns: repeat(4, 1fr); /* Чотири колонки для великих екранів */
+    }
+}
+
+/* Адаптивні стилі для футера */
+@media (max-width: 1200px) {
+    footer .lo p {
+        width: 700px; /* Зменшення ширини тексту футера на середніх екранах */
+    }
+}
+
+@media (max-width: 992px) {
+    footer .lo p {
+        width: 90%; /* Зменшення ширини тексту для малих екранів */
+    }
+    footer {
+        padding: 50px 10px; /* Зменшення відступів футера */
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+      padding: 30px 10px; /* Менші відступи для вузьких екранів */
+    }
+    footer .lo p {
+      width: 100%; /* Текст футера на всю ширину */
+      margin-bottom: 20px; /* Відступ між абзацами */
+    }
+}
+
+@media (max-width: 576px) {
+    footer .lo p {
+        width: 100%; /* Вирівнювання тексту для дуже вузьких екранів */
+        text-align: center; /* Центрування тексту */
+    }
+
+    footer {
+      padding: 20px 5px; /* Мінімальні відступи для футера */
+    }
+}
+.margin-bottom-style {
+    display: none;
+  }
