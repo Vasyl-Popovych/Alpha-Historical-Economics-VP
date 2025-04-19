@@ -18,18 +18,28 @@ function toggleTopButtons33(){
     Br4.style.display = 'none';
   }
 }
-
+// Викликаємо одразу після завантаження DOM
 document.addEventListener("DOMContentLoaded", toggleTopButtons33);
+  
+// Викликаємо при скролі
 window.addEventListener("scroll", toggleTopButtons33);
 
-function scrollToTop1() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
+ function scrollToTop1() {
+  window.scrollTo({top: 0, behavior: "smooth"})
+ }
 
-function scrollToTop2() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
+ function scrollToTop2() {
+  window.scrollTo({top: 0, behavior: "smooth"})
+ }
 
+
+// Функція для обробки зміни вибору країни
+document.getElementById('Cuntry').addEventListener('change', function() {
+  var url = this.value;
+  if (url) { // Якщо вибрана країна
+      window.location.href = url; // Перенаправлення на обраний сайт
+  }
+});
 
 
 
