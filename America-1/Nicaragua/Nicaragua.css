@@ -70,7 +70,7 @@ position: absolute;
 
 .p1  {
   font-size: 32px;
-  margin-right: 40px;
+  margin-right: 0px;;
 }
 
 .ro3 {
@@ -731,7 +731,6 @@ footer .lo p {
 .margin-bottom-style {
   display: none;
 }
-
 
 #top {
   position: fixed;
