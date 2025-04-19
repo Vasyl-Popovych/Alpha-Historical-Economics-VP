@@ -1,773 +1,132 @@
-/* header------------------------------ */
-* {
-  margin: 0;
-  padding: 0;
+/* Контейнер для карток */
+.Europe {
+    display: grid; /* Використання CSS Grid для розміщення карток */
+    grid-template-columns: 1fr; /* Одна колонка для мобільних екранів */
+    gap: 20px; /* Відстань між картками */
+    margin-left: 25px; /* Відступ ліворуч від контейнера */
+    margin-bottom: 20px; /* Відступ знизу */
 }
 
-header {
-  padding: 20px 0;
+/* Налаштування для карток */
+.cuntry {
+    width: 100%; /* Картка займає всю ширину контейнера */
+    max-width: 400px; /* Максимальна ширина картки */
+    padding: 10px; /* Внутрішні відступи для картки */
+    display: flex; /* Flex-контейнер для структури картки */
+    flex-direction: column; /* Вертикальне вирівнювання елементів всередині */
+    justify-content: space-between; /* Простір розподіляється між елементами */
 }
 
-
-
-
-
-
-.ro1 {
-  background: linear-gradient(90deg, #2f3b94 0%, #c8c9d0 99%);
-  padding: 20px;
-  border-bottom: 1px solid rgb(87, 78, 78); 
-
+.card {
+    display: flex; /* Flex-контейнер для картки */
+    flex-direction: column; /* Вертикальне розташування елементів */
+    justify-content: space-between; /* Простір між елементами */
+    height: 100%; /* Висота картки відповідає вмісту */
+    background: linear-gradient(90deg, #2f3b94 0%, #c8c9d0 99%); /* Градієнтний фон */
+    color: aliceblue; /* Колір тексту */
 }
 
-.Company  {
-  position: absolute;
-  top: 20px;
-  left: 150px;
-  font-size: 32px;
-}
-.Company   {
-  text-decoration: none;
-  color: #000;
-
+.card-body {
+    flex-grow: 1; /* Заповнює весь доступний простір */
+    display: flex; /* Flex-контейнер для тіла картки */
+    flex-direction: column; /* Вертикальне вирівнювання тексту та інших елементів */
+    justify-content: space-between; /* Простір між елементами тіла картки */
 }
 
-
-.p2  {
-  display: none;
+.card-text {
+    flex-grow: 1; /* Розтягується, щоб заповнити доступний простір */
+    overflow: hidden; /* Приховує надлишковий текст */
+    display: -webkit-box; /* Відображення елемента як контейнер з рядками */
+    /* -webkit-line-clamp: 4; Обмежує текст до 4 рядків */
+    -webkit-box-orient: vertical; /* Вертикальне орієнтування елементів */
+    /* text-overflow: ellipsis; Додає три крапки ("...") для довгого тексту */
 }
 
-.ro2 {
-  display: flex;
-  list-style-type: none;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 30px;
-  margin-right: 200px;
+.card img {
+    max-height: 200px; /* Обмеження висоти зображення */
+    object-fit: cover; /* Зображення заповнює доступну область */
 }
 
-.ro4 {
-position: relative;
-}
-
-.ro4 {
-position: absolute;
-list-style-type: none;
-top: 20px;
-right: 20px;
-}
-.ro1 {
-position: relative;
-}
-
-.ro1  img {
-position: absolute;
-  width: 100%;
-  max-width: 30px;
-  margin-top: 12px;
-  max-width: 40px;
-}
-
-.p1  {
-  font-size: 32px;
-  margin-right: 0px;;
-}
-
-.ro3 {
-  color: black;
-  text-decoration: none;
-}
-.drop {
-  margin: 0;
-  padding: 0;
-}
-
-.Company-2 {
-  display: none;
-}
-
-.nav-btn {
-display: none;
-}
-
-
-
-
-/* section------------------------------ */
- 
-
-h1 {
-  font-size: 64px; /* Збільшуємо розмір */
-  font-weight: bold;
-  text-align: center;
-  margin-top: 30px; /* Додаємо відступ зверху */
-  margin-bottom: 20px; /* Додаємо відступ знизу */
-  color: #2f3b94; /* Змінюємо колір на більш виразний */
-  position: relative;
-}
-
-h1.shadow {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Додаємо легку тінь */
-}
-
-h1::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: #f39c12; /* Лінія акцентного кольору */
-  margin: 10px auto 0; /* Центруємо лінію під заголовком */
-}
-
-
-.r3 p {
-  padding: 10px;
-}
-
-.h2-1  {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 32px;
-}
-
-.h2-2  {
-  margin-top: 50px;
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 32px;
-}
-
-.r3  {
-  padding: 60px;
-}
-
-.r3 h3 {
-  font-size: 32px;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 10px;
-}
-.r3 h4 {
-  padding: 25px;
-  font-size: 24px;
-}
-
-
-.wo h1 {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 48px;
-}
-
-.wo h2 {
-  margin-left: 0px;
-}
-
-.to {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(1);
-}
-
-
-
-
-.left {
-grid-column: 1/2;
-border-right: 1px solid rgb(149, 144, 144);
-background-color: #f0f0f0;
-}
-
-.center {
-grid-column: 2/12;
-
-}
-
-.right {
-  grid-column: 12/13;
-  border-left: 1px solid rgb(149, 144, 144);
-  background-color: #f0f0f0;
-  }
- 
-
-  .right  img {
-      width: 100%;
-      max-width: 400px;
-      margin-top: 50px;
-      
-  }
-  
- 
-
-  h5 {
-      text-align: center;
-      font-size: 24px;
-  }
-  
-  .left img {
-      width: 100%;
-      max-width: 400px;
-      margin-top: 50px;
-  }
-  .left img:first-of-type {
-      margin-top: 200px; /* Більший відступ для першого зображення */
-  }
-
-  
-select {
-  padding: 8px;
-  border: 2px solid #2f3b94;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #2f3b94;;
-}
-
-select:hover {
-  border-color: #444;
-  cursor: pointer;
-}
-
-.ad-banner {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px 0;
-  text-align: center;
-}
-.ad-banner img {
-  max-width: 100%;
-  height: auto;
-}
-
-.ad-banner {
-  display: none; /* Приховуємо блок реклами */
+.card a {
+    text-decoration: none; /* Видаляє підкреслення з посилання */
+    color: aliceblue; /* Колір тексту посилання */
+    align-self: flex-end; /* Вирівнює посилання донизу картки */
 }
 
 footer {
-  display: flex;
-  padding: 50px 20px;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  background-color: #21232e;
-  color: white;
-}
-
-footer .lo p {
-width: 900px;
-text-align: justify;
-margin-bottom: 15px;
-}
-
-footer .lo p:first-child {
-  margin-bottom: 30px;
-}
-
-footer .lo p b {
-  color: #f39c12;
-}
-
-@media (min-width: 1500px) {
-.ro1 img {
-  margin-right: 525px; /* Додає додатковий правий відступ для великих екранів */
-}
-}
-/* Стилі для дуже великих екранів (мінімальна ширина: 1440px) */
-@media (min-width: 1440px) and (max-width: 1500px) {
-.to {
-  grid-template-columns: repeat(12, 1fr); /* Встановлює 12-колонну сітку */
-}
-
-.left {
-  grid-column: 1/2; /* Ліва секція займає першу колонку */
-}
-
-.center {
-  grid-column: 2/12; /* Центральна секція займає колонки з 2 по 11 */
-}
-
-.right {
-  grid-column: 12/13; /* Права секція займає останню колонку */
-}
-
-.ro1 img {
-  margin-right: 480px; /* Додає додатковий правий відступ для великих екранів */
-}
-}
-
-/* Стилі для екранів від 1200px до 1439px */
-@media (min-width: 1200px) and (max-width: 1439px) {
-.to {
-  grid-template-columns: repeat(12, 1fr); /* 12-колонна сітка */
-}
-
-.left {
-  grid-column: 1/2; /* Ліва секція в першій колонці */
-}
-
-.center {
-  grid-column: 2/12; /* Центральна секція займає колонки з 2 по 11 */
-}
-
-.right {
-  grid-column: 12/13; /* Права секція в останній колонці */
-}
-
-.ro1 img {
-  margin-right: 285px; /* Зменшений правий відступ для менших екранів */
-}
-
-.Company  {
-  position: absolute;
-  top: 20px;
-  left: 60px;
-  font-size: 20px;
-}
-.p1 {
-  font-size: 20px; /* Встановлює розмір шрифту для .p1 */
-  margin-right: 5px; /* Корекція правого відступу */
-}
-.ro4 {
-  margin-top: -5px;
-}
-
-}
-
-/* Стилі для великих екранів (від 1000px до 1199px) */
-@media (min-width: 1025px) and (max-width: 1199px) {
-.to {
-  grid-template-columns: repeat(12, 1fr); /* 12-колонна сітка */
-}
-
-.left {
-  grid-column: 1/2; /* Ліва секція в першій колонці */
-}
-
-.center {
-  grid-column: 2/12; /* Центральна секція займає колонки з 2 по 11 */
-}
-
-.right {
-  grid-column: 12/13; /* Права секція в останній колонці */
-}
-
-.ro1 img {
-  margin-right: 15px; /* Мінімальний правий відступ для цього розміру екрану */
-  margin-top: 7px;
-}
-
-.Company  {
-  position: absolute;
-  top: 20px;
-  left: 60px;
-  font-size: 20px;
-}
-.p1 {
-  font-size: 20px; /* Встановлює розмір шрифту для .p1 */
-  margin-right: -25px; /* Корекція правого відступу */
-}
-.ro4 {
-  margin-top: -5px;
-}
-}
-
-/* Стилі для планшетів та середніх екранів (від 768px до 999px) */
-@media (min-width: 888px) and (max-width: 1024px) {
-.to {
-  grid-template-columns: repeat(12, 1fr); /* 12-колонна сітка */
-}
-
-.left {
-  grid-column: 1/2; /* Ліва секція в першій колонці */
-}
-
-.center {
-  grid-column: 2/12; /* Центральна секція займає колонки з 2 по 11 */
-}
-
-.right {
-  grid-column: 12/13; /* Права секція в останній колонці */
-}
-
-.ro1 img {
-  margin-right: -10px; /* Негативний відступ для вирівнювання зображення */
-  margin-top: 1px;
-}
-
-.ro2 {
-  margin-right: 150px;
-  font-size: 15px;
-}
-.Company  {
-  position: absolute;
-  top: 20px;
-  left: 55px;
-  font-size: 15px;
-}
-
-.p1 {
-  font-size: 15px; /* Встановлює розмір шрифту для .p1 */
-  margin-right: -25px; /* Корекція правого відступу */
-}
-
-.ro4 {
-  margin-top: -5px;
-}
-
-.wo h1 {
-  font-size: 40px; /* Встановлює розмір шрифту для заголовків в .wo */
-}
-
-.r3 h3 {
-  font-size: 28px; /* Розмір шрифту для заголовків h3 в .r3 */
-}
-
-.r3 h4 {
-  font-size: 20px; /* Розмір шрифту для заголовків h4 в .r3 */
-}
-
-footer {
-  padding: 40px 20px;
-}
-footer .lo p {
-  width: 100%;
-}
-}
-
-/* Стилі для мобільних пристроїв (до 768px) */
-@media (max-width: 887px) {
-.to {
-  grid-template-columns: 1fr; /* Одноколонна сітка */
-}
-
-.left, .right {
-    display: none; /* Приховує ліву та праву секції на мобільних */
-}
-
-.center {
-  grid-column: 1/2; /* Центральна секція займає всю ширину */
-}
-
-.ro1 {
-  position: relative;
-}
-
-.r3  {
-  padding: 15px;
-}
-
-.nav-btn {
-  font-size: 2em;
-  padding-inline: 10px;
-  padding-bottom: 3px;
-  border: none;
-  background-color: rgb(17, 24, 131);
-  color: white;
-  display: block;
-  cursor: pointer;
-  margin-left: 50px;
-}
-
-.ro1  img {
-  position: absolute;
-    width: 100%;
-    max-width: 30px;
-    margin-top: 15px;
-    left: 25px;
-
-}
-
-
-.ro4 {
-  position: absolute;
-  list-style-type: none;
-  top: 25px;
-  right: 20px;
-}
-
-.drop {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-/* Відображаємо випадаюче меню, коли користувач наводить або натискає на кнопку */
-.nav-btn:hover + .ro2, /* Показуємо меню, коли курсор наведений на кнопку */
-.nav-btn:focus + .ro2, /* Показуємо меню, коли кнопка у фокусі (для доступності з клавіатури) */
-.ro2:hover { /* Показуємо меню, коли курсор наведений на саме меню */
-  display: block; /* Відображаємо меню */
-  position: absolute; /* Розміщуємо меню у відносній позиції до кнопки */
-  background: linear-gradient(90deg, #2f3b94 0%, #c8c9d0 99%); /* Додаємо градієнтний фон */
-  margin-top: 0px; /* Відсутній верхній відступ */
-  margin-left: 50px; /* Зсув меню вправо */
-  padding: 0; /* Відсутні внутрішні відступи */
-  pointer-events: auto; /* Дозволяємо кліки всередині меню */
-}
-
-
-
-
-
-.ro2 {
-  display: none;
-  position: absolute;
-  background: linear-gradient(90deg, #2f3b94 0%, #c8c9d0 99%);
-  pointer-events: auto;
-  z-index: 1000; /* Add high z-index to ensure it appears on top */
-}
-
-
-.ro2 a:hover {
-  background-color: #2f3b94;
-}
-
-
-.drop a { /* or .nav-dropdown li if they are list items */
-  margin-top: 15px; /* Adjust as needed */
-  margin-bottom: 15px;
-  padding: 10px;
-  margin-right: 0px;
-  font-size: 17px;
-  display: block; /* Ensures the padding applies vertically */
-}
-.p2 {
-  position: absolute;
-  display: block;
-  margin-top: 12px;
-  margin-left: 125px;
-  font-size: 20px;
-}
-
-.Company  {
-  position: absolute;
-  top: 32px;
-  left: 240px;
-  font-size: 20px;
-}
-
-.p1 {
-  font-size: 20px; /* Зменшений розмір шрифту для мобільних */
-  margin-right: 0px; /* Відсутній правий відступ */
-}
-
-.p2 {
-  position: absolute;
-  display: block;
-  margin-top: 12px;
-  margin-left: 125px;
-  font-size: 20px;
-}
-
-.Company  {
-  position: absolute;
-  top: 32px;
-  left: 330px;
-  font-size: 20px;
-}
-
-
-
-.wo h1 {
-  font-size: 32px; /* Зменшений розмір шрифту заголовків */
-}
-
-.r3 h3 {
-  font-size: 24px; /* Зменшений розмір шрифту для h3 */
-  margin-top: 30px;
-  margin-bottom: 10px; /* Додає відступи для зручності читання */
-}
-
-.r3 h4 {
-  font-size: 18px; /* Зменшений розмір шрифту для h4 */
-  padding: 15px; /* Додає відступи */
-}
-
-footer {
-  padding: 30px 10px; /* Відступи для нижнього колонтитулу */
-}
-
-footer .lo p {
-  width: 100%; /* Розтягує абзац на всю ширину */
-  text-align: center;
-}
-}
-@media (max-width: 786px) {
-  .p2 {
-    position: absolute;
-    display: block;
-    margin-top: 12px;
-    margin-left: 100px;
-    font-size: 14px;
-  }
-  
-  .Company  {
-    position: absolute;
-    top: 32px;
-    left: 170px;
-    font-size: 14px;
-  }
-
-
-  .ro4 {
-    position: absolute;
-    list-style-type: none;
-    top: 25px;
-    right: 5px;
-  }
-}
-
-@media (max-width: 444px) {
-  
-  .Company  {
-    display: none;
-  }
-
-  .ro4 {
-    position: absolute;
-    list-style-type: none;
-    top: 25px;
-    right: 5px;
-  }
-  .p2 {
-    position: absolute;
-    display: block;
-    margin-top: 25px;
-    margin-left: 130px;
-    font-size: 16px;
-  }
-  
-  .Company-2 {
-    position: absolute;
-    font-size: 20px;
-    color: #000;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-    margin-top: 5px;
-    margin-left: 135px;
-  }
-  
-
-}
-@media (max-width: 333px)
-{
-  .ro1  img {
-    position: absolute;
-      width: 100%;
-      max-width: 30px;
-      margin-top: 15px;
-      left: 20px;
-  
-  }
-  .nav-btn {
-    font-size: 2em;
-    padding-inline: 10px;
-    padding-bottom: 3px;
-    border: none;
-    background-color: rgb(17, 24, 131);
-    color: white;
-    display: block;
-    cursor: pointer;
-    margin-left: 40px;
-  }
+    display: flex; /* Flex-контейнер для футера */
+    padding: 50px 20px; /* Внутрішні відступи */
+    align-items: center; /* Вирівнювання елементів по центру */
+    flex-direction: column; /* Вертикальне розташування елементів */
+    position: relative; /* Відносне позиціонування футера */
+    background-color: #21232e; /* Темний фон футера */
+    color: white; /* Колір тексту */
+ }
+
+ footer .lo p {
+    width: 900px; /* Ширина текстового блоку */
+    text-align: justify; /* Вирівнювання тексту по ширині */
+    margin-bottom: 15px; /* Відступ знизу між абзацами */
+ }
+
+ footer .lo p:first-child {
+    margin-bottom: 30px; /* Збільшений відступ для першого абзацу */
+ }
  
-  .p2 {
-    position: absolute;
-    display: block;
-    margin-top: 18px;
-    margin-left: 90px;
-    font-size: 14px;
-  }
-  .Company-2 {
-    position: absolute;
-    font-size: 20px;
-    color: #000;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-    margin-top: 1px;
-    margin-left: 97px;
-  }
+ footer .lo p b {
+    color: #f39c12; /* Виділення жирним кольором #f39c12 */
+ }
 
-  .Company  {
-    display: none;
-  }
-
-  .ro4 {
-    position: absolute;
-    list-style-type: none;
-    top: 25px;
-    right: 5px;
-  }
-
-  
-
+ /* Дві колонки на середніх екранах */
+@media (min-width: 576px) {
+    .Europe {
+        grid-template-columns: repeat(2, 1fr); /* Дві колонки для екранів середнього розміру */
+    }
 }
 
-/* Додатковий стиль для дуже великих екранів (мінімальна ширина: 1600px) */
-@media (min-width: 1600px) {
-.ro1 img {
-  margin-right: 700px; /* Збільшує правий відступ зображення */
+/* Чотири колонки на великих екранах */
+@media (min-width: 992px) {
+    .Europe {
+        grid-template-columns: repeat(4, 1fr); /* Чотири колонки для великих екранів */
+    }
 }
 
-.p1 {
-  font-size: 36px; /* Збільшений розмір шрифту для .p1 */
+/* Адаптивні стилі для футера */
+@media (max-width: 1200px) {
+    footer .lo p {
+        width: 700px; /* Зменшення ширини тексту футера на середніх екранах */
+    }
 }
 
-.wo h1 {
-  font-size: 56px; /* Збільшений розмір шрифту заголовків в .wo */
+@media (max-width: 992px) {
+    footer .lo p {
+        width: 90%; /* Зменшення ширини тексту для малих екранів */
+    }
+    footer {
+        padding: 50px 10px; /* Зменшення відступів футера */
+    }
 }
 
-.r3 h3 {
-  font-size: 36px; /* Збільшений розмір шрифту для заголовків h3 в .r3 */
+@media (max-width: 768px) {
+    footer {
+      padding: 30px 10px; /* Менші відступи для вузьких екранів */
+    }
+    footer .lo p {
+      width: 100%; /* Текст футера на всю ширину */
+      margin-bottom: 20px; /* Відступ між абзацами */
+    }
 }
 
-.r3 h4 {
-  font-size: 28px; /* Збільшений розмір шрифту для заголовків h4 в .r3 */
-}
+@media (max-width: 576px) {
+    footer .lo p {
+        width: 100%; /* Вирівнювання тексту для дуже вузьких екранів */
+        text-align: center; /* Центрування тексту */
+    }
+
+    footer {
+      padding: 20px 5px; /* Мінімальні відступи для футера */
+    }
 }
 .margin-bottom-style {
-  display: none;
-}
-
-#top {
-  position: fixed;
-  bottom: 25px;
-  right: 45px;
-  font-size: 2.9rem;
-  color: rgb(0, 0, 0, 0.6);
-  cursor: pointer;
-  
-}
-
-#top1 {
-  position: fixed;
-  bottom: 10px;
-  right: 45px;
-  font-size: 2.9rem;
-  color: rgb(0, 0, 0, 0.6);
-  cursor: pointer;
-  
-}
-
-#top2 {
-  position: fixed;
-  bottom: 25px;
-  right: 45px;
-  font-size: 2.9rem;
-  color: rgb(0, 0, 0, 0.6);
-  cursor: pointer;
-  
-}
-
-#top3 {
-  position: fixed;
-  bottom: 10px;
-  right: 45px;
-  font-size: 2.9rem;
-  color: rgb(0, 0, 0, 0.6);
-  cursor: pointer;
-  
-}
+    display: none;
+  }
