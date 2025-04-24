@@ -13,6 +13,8 @@ header {
 
 
 
+
+
 .ro1 {
   background: linear-gradient(90deg, #2f3b94 0%, #c8c9d0 99%);
   padding: 20px;
@@ -402,7 +404,7 @@ footer .lo p b {
 .Company  {
   position: absolute;
   top: 20px;
-  left: 55px;
+  left: 65px;
   font-size: 15px;
 }
 
@@ -634,7 +636,7 @@ footer .lo p {
     position: absolute;
     display: block;
     margin-top: 25px;
-    margin-left: 130px;
+    margin-left: 118px;
     font-size: 16px;
   }
   
@@ -646,7 +648,7 @@ footer .lo p {
     display: block;
     cursor: pointer;
     margin-top: 5px;
-    margin-left: 135px;
+    margin-left: 127px;
   }
   
 
@@ -731,8 +733,6 @@ footer .lo p {
 .margin-bottom-style {
   display: none;
 }
-
-
 
 #top {
   position: fixed;
